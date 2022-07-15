@@ -28,7 +28,8 @@
 }
 
 
-button{background-color: aqua;}
+.btnn
+{background-color: aqua;}
 .clock {
     color: rgb(16, 2, 2);
     font-weight: 700;
