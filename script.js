@@ -1,64 +1,77 @@
-// army style id declerations
-var c9am = document.querySelector("nine");
-var c10am = document.querySelector("ten");
-var c11am = document.querySelector("eleven");
-var noon12 = document.querySelector("twelve");
-var c1pm = document.querySelector("thirteen");
-var c2pm = document.querySelector("fourteen");
-var c3pm = document.querySelector("fifthteen");
-var c4pm = document.querySelector("sixteen");
-var c5pm = document.querySelector("seventeen");
- 
- var btnK = document.querySelectorAll('#mybtn')
+//takes current date and
+var today = new Date();
 
+var date =
+  today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 
-var currentDate = document.querySelector("#currentDate");
-//current time function
-currentDate = new Date();
-document.getElementById("currentDate").innerHTML = currentDate;
+var time =
+  today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
+var dateTime = date + " " + time;
+
+document.getElementById("currentDate").innerHTML = dateTime;
 
 //saving through localstorage
- document.getElementById("mybtn").addEventListener("onclick", function () {
+
+//9am
+document.getElementById("mybtn9").addEventListener("click", function () {
+  localStorage.setItem("#hr0", document.getElementById("nine").value);
+});
+document.getElementById("nine").value = localStorage.getItem("#hr0"); //took outside
+
+//10am
+
+document.getElementById("mybtn10").addEventListener("click", function () {
+  localStorage.setItem("#hr1", document.getElementById("ten").value);
+});
+document.getElementById("ten").value = localStorage.getItem("#hr1"); //took outside
 
 
-          c9am=document.getElementById('nine ').textContent
-		      localStorage.setItem("text9".hr9am );
-   
-         
+//11am
+document.getElementById("mybtn11").addEventListener("click", function () {
+  localStorage.setItem("#hr2", document.getElementById("nine").value);
+});
+document.getElementById("eleven").value = localStorage.getItem("#hr2");
 
-        var hr10am=document.getElementById('ten').textContent
-         localStorage.setItem('text10'.hr10am);
+//12am
+document.getElementById("mybtn12").addEventListener("click", function () {
+  localStorage.setItem("#hr3", document.getElementById("twelve").value);
+});
+document.getElementById("twelve").value = localStorage.getItem("#hr3");
 
-          var hr11am=document.getElementById('eleven').textContent
-         localStorage.setItem('text11',hr11am);
+//1pm
+document.getElementById("mybtn13").addEventListener("click", function () {
+  localStorage.setItem("#hr4", document.getElementById("thirteen").value);
+});
+document.getElementById("thirteen").value = localStorage.getItem("#hr4");
 
-          var  noon12=document.getElementById('twelve').textContent
-         localStorage.setItem('textnoon',noon12);
+//2pm
+document.getElementById("mybtn14").addEventListener("click", function () {
+  localStorage.setItem("#hr5", document.getElementById("fourteen").value);
+});
+document.getElementById("fourteen").value = localStorage.getItem("#hr5");
 
-          var  hr1pm=document.getElementById('thirteen').textContent
-         localStorage.setItem('text13',hr1pm);
+//3pm
+document.getElementById("mybtn15").addEventListener("click", function () {
+  localStorage.setItem("#hr6", document.getElementById("fifthteen").value);
+});
+document.getElementById("fifthteen").value = localStorage.getItem("#hr6");
 
-          var  hr2pm=document.getElementById('fourteen').textContent
-         localStorage.setItem('text14',hr2pm);
+//4pm
+document.getElementById("mybtn16").addEventListener("click", function () {
+  localStorage.setItem("#hr7", document.getElementById("sixteen").value);
+});
+document.getElementById("sixteen").value = localStorage.getItem("#hr7");
 
-          var  hr3pm=document.getElementById('fifthteen').textContent
-         localStorage.setItem('text15',hr3pm);
-
-          var  hr4pm=document.getElementById('sixteen').textContent
-         localStorage.setItem('text16',hr4pm);
-
-          var  hr5pm=document.getElementById('seventeen').textContent
-         localStorage.setItem('text17',hr5pm);
-
- 
-    });
-
-
-
-
-
+//5pm
+document.getElementById("mybtn17").addEventListener("click", function () {
+  localStorage.setItem("#hr8", document.getElementById("seventeen").value);
+});
+document.getElementById("seventeen").value = localStorage.getItem("#hr8");
 
 
-  
 
+//color design
+var userEvent=document.querySelectorAll(".user-event");
+userEvent=time
+if(userEvent){}
