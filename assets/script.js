@@ -75,19 +75,23 @@ document.getElementById("seventeen").value = localStorage.getItem("#hr8");
 
 //color design
 
-$("user-event").each(function () {
-  var name = parseInt($(this).attr("name"));
-  if (name < time) {
+$(".user-event").each(function () {
+  var clock = parseInt($(this).siblings(".clock")[0].textContent);
+  console.log(time)
+  console.log(clock)
+  
+  var currentTime=parseInt(time);
+  if (clock < currentTime) {
       $(this).addClass("past");
   }
 
 
-  if (name > time) {
+  if (clock> currentTime) {
       $(this).addClass("future")
    
   }
 
-  if (name === time) {
+  if (clock === currentTime) {
       $(this).addClass("present")
   }
 
