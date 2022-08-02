@@ -12,8 +12,6 @@
   border-bottom: 5px solid black;
 
 }
-.container{ text-align: center;
-}
 
 .wrapper h1 {
     color: brown;
@@ -21,13 +19,27 @@
 .wrapper p {
     font-weight: 700;
 }
+
 .user-event{
-    background: transparent;
-    resize: none;
     padding: 30px;
 }
 
-#mybtn
+.past{
+    background-color: gray;
+    padding: 30px;
+
+}
+.present{
+    background-color: red;
+    padding: 30px;
+  
+   
+}
+ .future{
+    background-color: green;
+    padding: 30px;
+ }
+ .btnn
 {background-color: aqua;}
 .clock {
     color: rgb(16, 2, 2);
@@ -40,4 +52,3 @@
     
 
 }
-

@@ -5,9 +5,11 @@ var date =
   today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 
 var time =
-  today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  today.getHours("HH") + ":" + today.getMinutes() + ":" + today.getSeconds();
 
 var dateTime = date + " " + time;
+
+
 
 document.getElementById("currentDate").innerHTML = dateTime;
 
@@ -72,6 +74,23 @@ document.getElementById("seventeen").value = localStorage.getItem("#hr8");
 
 
 //color design
-var userEvent=document.querySelectorAll(".user-event");
-userEvent=time
-if(userEvent){}
+
+$("user-event").each(function () {
+  var name = parseInt($(this).attr("name"));
+  if (name < time) {
+      $(this).addClass("past");
+  }
+
+
+  if (name > time) {
+      $(this).addClass("future")
+   
+  }
+
+  if (name === time) {
+      $(this).addClass("present")
+  }
+
+
+
+})
